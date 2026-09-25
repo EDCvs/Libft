@@ -6,7 +6,7 @@
 /*   By: ichimvis <ichimvis@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/04 15:09:37 by ichimvis          #+#    #+#             */
-/*   Updated: 2026/09/04 19:06:34 by ichimvis         ###   ########.fr       */
+/*   Updated: 2026/09/25 19:01:39 by ichimvis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,9 @@ RETURNS
 DESCRIPTION
 ----------
 		The  ft_atoi() function converts the initial portion of
-				the string pointed to by nptr to int -
-				it does not detect errors
+		the string pointed to by nptr to int -
+		it does not detect errors
 */
-
 int	ft_atoi(const char *nptr)
 {
 	int		i;

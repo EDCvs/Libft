@@ -6,7 +6,7 @@
 /*   By: ichimvis <ichimvis@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/31 14:45:56 by ichimvis          #+#    #+#             */
-/*   Updated: 2026/08/31 17:05:17 by ichimvis         ###   ########.fr       */
+/*   Updated: 2026/09/02 15:55:03 by ichimvis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ DESCRIPTION
 		Here "character" means "byte"; these functions do not work with wide or
 		multibyte characters.
 */
-
 char	*ft_strrchr(const char *s, int c)
 {
 	char	*lastmatch;

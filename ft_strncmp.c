@@ -6,7 +6,7 @@
 /*   By: ichimvis <ichimvis@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/02 09:48:55 by ichimvis          #+#    #+#             */
-/*   Updated: 2026/09/02 11:18:38 by ichimvis         ###   ########.fr       */
+/*   Updated: 2026/09/02 15:54:56 by ichimvis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ DESCRIPTION
 		• a positive value if s1 is greater than s2.
 
 */
-
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;

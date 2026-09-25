@@ -6,17 +6,17 @@
 /*   By: ichimvis <ichimvis@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/28 18:34:21 by ichimvis          #+#    #+#             */
-/*   Updated: 2026/08/28 18:54:46 by ichimvis         ###   ########.fr       */
+/*   Updated: 2026/09/25 19:06:17 by ichimvis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_toupper(int c) {
-
-    if (c >= 'a' && c <= 'z')
-        return (c - 32);
-    return (c);
+int	ft_toupper(int c)
+{
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
+	return (c);
 }
 
 // int main(void)
