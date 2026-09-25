@@ -6,7 +6,7 @@
 /*   By: ichimvis <ichimvis@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 13:15:07 by ichimvis          #+#    #+#             */
-/*   Updated: 2026/09/22 14:17:41 by ichimvis         ###   ########.fr       */
+/*   Updated: 2026/09/25 19:07:52 by ichimvis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,13 +34,18 @@ DESCRIPTION
 */
 char	*ft_strdup(const char *s1)
 {
-	size_t	total;
-	void	*dup;
-
-	total = ft_strlen(s1) + 1;
-	dup = malloc(total);
-	if (dup == NULL)
-		return (NULL);
-	ft_strlcpy(dup, s1, total);
-	return ((char *)dup);
+	return (ft_substr(s1, 0, ft_strlen(s1)));
 }
+
+// char	*ft_strdup(const char *s1)
+// {
+// 	size_t	total;
+// 	void	*dup;
+
+// 	total = ft_strlen(s1) + 1;
+// 	dup = malloc(total);
+// 	if (dup == NULL)
+// 		return (NULL);
+// 	ft_strlcpy(dup, s1, total);
+// 	return ((char *)dup);
+// }

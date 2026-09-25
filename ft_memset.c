@@ -6,7 +6,7 @@
 /*   By: ichimvis <ichimvis@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/28 12:25:05 by ichimvis          #+#    #+#             */
-/*   Updated: 2026/09/15 13:19:20 by ichimvis         ###   ########.fr       */
+/*   Updated: 2026/09/21 21:11:17 by ichimvis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ RETURNS
 DESCRIPTION
 ----------
 		The  ft_memset()  function  fills  the  first  n 
-              bytes of the memory area pointed to by s with the constant byte c.
+        bytes of the memory area pointed to by s with the constant byte c.
 */
 
 void	*ft_memset(void *s, int c, size_t n)
