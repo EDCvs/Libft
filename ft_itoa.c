@@ -31,21 +31,30 @@ PROTOTYPE
 */
 char *ft_itoa(int n)
 {
-  size_t i;
-  size_t temp;
+  int digit;
+  int temp;
   void *s;
   int sign;
 
+  temp = n;
+	digit = 0;
+	sign = 1;
+
   if (n < 0)
     sign = -1;
-  
-  temp = n;
+	if (n == 0)
+		digit = 1;
 
-  while (temp % 10 != 0)
+  while (temp != 0)
     {
       temp = temp / 10;
-      i++;
+      digit++;
     }
+	if (sign < 0)
+		s = mallock(digit+2); // +1 space for NULL terminator, +1 space for the negative sign
+	else
+		s = mallock(digit+1); // +1 space for the NULL terminator
 
-  s = mallock();
+
+	// edge case for INT_min, INT_max
 }
