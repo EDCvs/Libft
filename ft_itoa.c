@@ -31,30 +31,56 @@ PROTOTYPE
 */
 char *ft_itoa(int n)
 {
-  int digit;
-  int temp;
-  void *s;
-  int sign;
+	char *str;
+	long temp;
+	int nbr_len;
 
-  temp = n;
-	digit = 0;
-	sign = 1;
+	temp = n;
+	nbr_len = get_digits(temp);
 
-  if (n < 0)
-    sign = -1;
+	str = malloc(sizeof(char) * (nbr_len + 1));
+	if (!str)
+		return NULL;
+
+	str[nbr_len] = '\0';
+
+	if (temp < 0)
+	{
+		str[0] = '-';
+		temp *= -1;
+	}
+
+	if (temp == 0)
+		str[0] = '0';
+
+	while (temp > 0)
+		{
+			str[nbr_len - 1] = (temp % 10) + '0';
+			temp /= 10;
+			nbr_len--;
+		}
+	return (str);
+}
+
+int get_digits(long n)
+{
+	int len;
+
+	len = 0;
+	if (n < 0)
+	{
+		len++;
+		n *= -1;
+	}
+
 	if (n == 0)
-		digit = 1;
+		return 1;
 
-  while (temp != 0)
-    {
-      temp = temp / 10;
-      digit++;
-    }
-	if (sign < 0)
-		s = mallock(digit+2); // +1 space for NULL terminator, +1 space for the negative sign
-	else
-		s = mallock(digit+1); // +1 space for the NULL terminator
+	while (n > 0)
+		{
+			n /= 10;
+			len++;
+		}
 
-
-	// edge case for INT_min, INT_max
+	return (len);
 }
