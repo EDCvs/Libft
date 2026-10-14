@@ -1,5 +1,7 @@
 #include "libft.h"
 
+static int get_digits(long n);
+
 /*
 PROTOTYPE
 ---------
@@ -26,6 +28,13 @@ PROTOTYPE
 	order and handles both positive and negative numbers.
 
 	The returned string is independent of the original integer.
+
+	ft_itoa uses the helper function get_digits() to 
+	retrieve the count of the digits of n.
+
+	get_digits() exists only within ft_itoa.c as prefixed
+	by `static`. It is prototyped at the top for the
+	compiler to know it exists after ft_itoa.
 ```
 
 */
@@ -62,7 +71,7 @@ char *ft_itoa(int n)
 	return (str);
 }
 
-int get_digits(long n)
+static int get_digits(long n)
 {
 	int len;
 
