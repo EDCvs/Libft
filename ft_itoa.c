@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ichimvis <ichimvis@student.42bangkok.co    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/16 16:08:45 by ichimvis          #+#    #+#             */
+/*   Updated: 2026/10/16 16:09:03 by ichimvis         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-static int get_digits(long n);
+static int	get_digits(long n);
 
 /*
 PROTOTYPE
@@ -29,7 +41,7 @@ PROTOTYPE
 
 	The returned string is independent of the original integer.
 
-	ft_itoa uses the helper function get_digits() to 
+	ft_itoa uses the helper function get_digits() to
 	retrieve the count of the digits of n.
 
 	get_digits() exists only within ft_itoa.c as prefixed
@@ -38,42 +50,37 @@ PROTOTYPE
 ```
 
 */
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-	char *str;
-	long temp;
-	int nbr_len;
+	char	*str;
+	long	temp;
+	int		nbr_len;
 
 	temp = n;
 	nbr_len = get_digits(temp);
-
 	str = malloc(sizeof(char) * (nbr_len + 1));
 	if (!str)
-		return NULL;
-
+		return (NULL);
 	str[nbr_len] = '\0';
-
 	if (temp < 0)
 	{
 		str[0] = '-';
 		temp *= -1;
 	}
-
 	if (temp == 0)
 		str[0] = '0';
-
 	while (temp > 0)
-		{
-			str[nbr_len - 1] = (temp % 10) + '0';
-			temp /= 10;
-			nbr_len--;
-		}
+	{
+		str[nbr_len - 1] = (temp % 10) + '0';
+		temp /= 10;
+		nbr_len--;
+	}
 	return (str);
 }
 
-static int get_digits(long n)
+static int	get_digits(long n)
 {
-	int len;
+	int	len;
 
 	len = 0;
 	if (n < 0)
@@ -81,15 +88,12 @@ static int get_digits(long n)
 		len++;
 		n *= -1;
 	}
-
 	if (n == 0)
-		return 1;
-
+		return (1);
 	while (n > 0)
-		{
-			n /= 10;
-			len++;
-		}
-
+	{
+		n /= 10;
+		len++;
+	}
 	return (len);
 }

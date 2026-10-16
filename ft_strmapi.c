@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ichimvis <ichimvis@student.42bangkok.co    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/16 16:12:28 by ichimvis          #+#    #+#             */
+/*   Updated: 2026/10/16 16:14:40 by ichimvis         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 /*
@@ -30,27 +42,24 @@ PROTOTYPE
 ```
 
 */
-char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-  size_t s_len;
-  size_t i;
-  char *new;
+	size_t	s_len;
+	size_t	i;
+	char	*new;
 
-  if (!s || !f)
-    return NULL;
-
-  s_len = ft_strlen(s);
-  new = malloc(s_len + 1); //+ 1 for the null terminator
-  if (!new)
-    return NULL;
-
-  i = 0;
-  while (i < s_len)
-    {
-      new[i] = f(i, s[i]);
-      i++;
-    }
-  new[i] = '\0';
-  return new;
-} 
-
+	if (!s || !f)
+		return (NULL);
+	s_len = ft_strlen(s);
+	new = malloc(s_len + 1);
+	if (!new)
+		return (NULL);
+	i = 0;
+	while (i < s_len)
+	{
+		new[i] = f(i, s[i]);
+		i++;
+	}
+	new[i] = '\0';
+	return (new);
+}
