@@ -6,7 +6,7 @@
 /*   By: ichimvis <ichimvis@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/31 14:45:56 by ichimvis          #+#    #+#             */
-/*   Updated: 2026/09/02 15:55:03 by ichimvis         ###   ########.fr       */
+/*   Updated: 2026/10/19 11:34:45 by ichimvis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ RETURNS
 DESCRIPTION
 ----------
 		The ft_strrchr() function returns a pointer to the last occurrence of
-        the character c in the string s.
+		the character c in the string s.
 
 		Here "character" means "byte"; these functions do not work with wide or
 		multibyte characters.
