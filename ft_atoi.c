@@ -6,7 +6,7 @@
 /*   By: ichimvis <ichimvis@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/04 15:09:37 by ichimvis          #+#    #+#             */
-/*   Updated: 2026/09/25 19:01:39 by ichimvis         ###   ########.fr       */
+/*   Updated: 2026/10/19 10:49:03 by ichimvis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int	ft_atoi(const char *nptr)
 
 	i = 0;
 	sign = 1;
-	while (nptr[i] >= 9 && nptr[i] <= 13)
+	while ((nptr[i] >= 9 && nptr[i] <= 13) || nptr[i] == 32)
 		i++;
 	if (nptr[i] == '+')
 		i++;
@@ -53,9 +53,3 @@ int	ft_atoi(const char *nptr)
 	}
 	return ((int)(result * sign));
 }
-
-// int main (void)
-// {
-//        char testStr[1] = "1";
-//        printf("%d\n", ft_atoi(testStr));
-// }
