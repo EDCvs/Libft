@@ -6,7 +6,7 @@
 /*   By: ichimvis <ichimvis@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 12:31:00 by ichimvis          #+#    #+#             */
-/*   Updated: 2026/10/17 14:46:33 by ichimvis         ###   ########.fr       */
+/*   Updated: 2026/10/19 10:24:54 by ichimvis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,13 +31,13 @@ DESCRIPTION
 void	ft_putnbr_fd(int n, int fd)
 {
 	long	num;
-	char	*digit;
+	char	digit;
 
 	num = n;
 	if (n < 0)
 	{
 		write(fd, &"-", 1);
-		num = -n;
+		num = -num;
 	}
 	if (num >= 10)
 		ft_putnbr_fd(num / 10, fd);
